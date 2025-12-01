@@ -1,10 +1,11 @@
 services:
   - type: web
     name: bot-whatsapp-sion
+    envVars:
+      - key: NODE_VERSION
+        value: 18
     buildCommand: "npm install"
     startCommand: "npm start"
-    env:
-      - key: PUPPETEER_CACHE_DIR
-        value: "/tmp"
     plan: free
-    region: oregon
+
+
